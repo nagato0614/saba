@@ -1,0 +1,12 @@
+[package]
+name = "saba"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[toolchain]
+channel = "nightly"
+components = ["rustfmt", "rust-src"]
+targets = ["x86_64-unknown-linux-gnu"]
+profile = "default"
