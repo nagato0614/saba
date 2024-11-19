@@ -189,7 +189,7 @@ impl FromStr for ElementKind
 {
     type Err = String;
 
-    fn from_str(s: &str) -> Result<Self, Self::Err>
+    pub fn from_str(s: &str) -> Result<Self, Self::Err>
     {
         match s
         {
