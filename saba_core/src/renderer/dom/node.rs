@@ -184,13 +184,16 @@ pub enum ElementKind
     Script,
     Body,
     P,
+    H1,
+    H2,
+    A,
 }
 
 impl FromStr for ElementKind
 {
     type Err = String;
 
-    pub fn from_str(s: &str) -> Result<Self, Self::Err>
+    fn from_str(s: &str) -> Result<Self, Self::Err>
     {
         match s
         {
@@ -200,6 +203,9 @@ impl FromStr for ElementKind
             "script" => Ok(ElementKind::Script),
             "body" => Ok(ElementKind::Body),
             "p" => Ok(ElementKind::P),
+            "h1" => Ok(ElementKind::H1),
+            "h2" => Ok(ElementKind::H2),
+            "a" => Ok(ElementKind::A),
             _ => Err(format!("unimplemented element name {:?}", s)),
         }
     }
